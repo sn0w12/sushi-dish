@@ -25,7 +25,7 @@ public class Dish {
     @Column(name = "price_euro")
     private double priceEuro;
 
-    @ManyToMany(mappedBy = "dishes")
+    @ManyToMany(mappedBy = "dishes", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JsonIgnore
     private List<CustomerOrder> customerOrders;
 
