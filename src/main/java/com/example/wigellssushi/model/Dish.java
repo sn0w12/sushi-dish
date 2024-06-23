@@ -9,6 +9,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "sushi_dishes")
 @JsonIgnoreProperties({"customerOrders"})
 public class Dish {
 
